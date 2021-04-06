@@ -6,4 +6,6 @@ import net.codejava.models.Lista;
 
 public interface ListaRepository extends JpaRepository<Lista, Long> {
     public Lista findByEmailUsuario(String emailUsuario);
+
+    public Lista findByIdLista(Long id);
 }

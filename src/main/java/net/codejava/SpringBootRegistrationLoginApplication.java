@@ -27,7 +27,8 @@ public class SpringBootRegistrationLoginApplication {
 	public void init() {
 
 	/*	
-		Lista listolha = new Lista();
+		Lista listolha = ne
+		w Lista();
 		InfoAluno infoAluno = new InfoAluno();
 		InfoEscola infoEscola = new InfoEscola();
 		infoEscola.setBairro("pqp");

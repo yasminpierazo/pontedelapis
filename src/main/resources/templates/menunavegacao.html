@@ -20,18 +20,22 @@
                    <script src="https://kit.fontawesome.com/e199f902ef.js" crossorigin="anonymous"></script>
                </head>
                <body>
-               <div class="vercaomobil">
+                <div class="vercaomobil">
                     <input type="checkbox" id="check">
                     <label for="check" class="checkbtn">
                         <i class="fas fa-bars"></i>
                     </label>
+                    <span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin: 10px;">
+                        Olá, <span sec:authentication="principal.nome"></span>.</span>
                     <img class="mobilelogo" src="/img/logoMobile.png">
                     <img class="logo" src="/img/Logo 1.png">
                     <ul class="vercaomobil">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">Sobre Nós</a></li>
-                        <li class="botao" ><a href="/login">Login</a></li>
-                        <li class="botao" ><a href="/cadastro_usuario">Cadastro</a></li>
+                        <li class="botao" sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+                        <li class="botao" sec:authorize="isAnonymous()"><a href="/cadastro_usuario">Cadastro</a></li>
+                        <li class="botao" sec:authorize="isAuthenticated()"><a href="/cadastro_usuario">Acesso</a></li>
+                        <li class="botao" sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
                     </ul>
                 </div>
                 <div class="flex-container invisivel">
@@ -47,17 +51,13 @@
                     <div class="sobrenos">
                         <a href="/about">Sobre nós</a>
                     </div>
+                    <span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin:30px;">
+                    Olá, <span sec:authentication="principal.nome"></span>.</span>
                     <div class="flex-container">
-                        <a href="#">
-                            <div id="login">
-                                Login
-                            </div>
-                        </a>
-                        <a href="/cadastro_usuario">
-                            <div id="registro">
-                                Cadastro
-                            </div>
-                        </a>
+                        <a href="/login" sec:authorize="isAnonymous()"><div class="login">Login</div></a>
+                        <a href="/cadastro_usuario" sec:authorize="isAnonymous()"><div class="registro">Cadastro</div></a>
+                        <a href="/escolhaPerfil" sec:authorize="isAuthenticated()"><div class="registro">Acesso</div></a>
+                        <a href="/logout" sec:authorize="isAuthenticated()"><div class="login" style="margin-left: 30px; margin-right: 30px;">Logout</div></a>
                     </div>
                 </div>
             </body>

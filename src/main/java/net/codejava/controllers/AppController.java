@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import net.codejava.models.Doacao;
+import net.codejava.models.InfoAluno;
+import net.codejava.models.InfoEscola;
 import net.codejava.models.Lista;
 import net.codejava.models.User;
 import net.codejava.repositories.DoacaoRepository;
@@ -81,7 +83,7 @@ public class AppController {
 	}
 
 
-	@GetMapping("/oi")
+	@GetMapping("/cadastro_aluno")
 	public String dk(){
 	
 		return "CadastroAluno";
@@ -104,9 +106,28 @@ public class AppController {
 	public String confirmation(Doacao doa) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userRepo.findByEmail(auth.getName());
+		Lista lista = listRepo.findByIdLista(doa.getIdLista());
+		InfoAluno aluno = new InfoAluno();
+		aluno.setMatricula(lista.getInfoAluno().getMatricula());
+		aluno.setNomeAluno(lista.getInfoAluno().getNomeAluno());
+		doa.setInfoAluno(aluno);	
+			InfoEscola escola = new InfoEscola();
+			escola.setEstadoEscola(lista.getInfoEscola().getEstadoEscola());
+			escola.setCepEscola(lista.getInfoEscola().getCepEscola());
+			escola.setCidadeEscola(lista.getInfoEscola().getCidadeEscola());
+			escola.setNomeEscola(lista.getInfoEscola().getNomeEscola());
+		doa.setInfoEscola(escola);
+					
 		doa.setEmailDoador(user.getEmail());
 		doaRepo.save(doa);
-		return "redirect:confirmDonation";
+		return "redirect:info_doacao";
+	}
+
+	@GetMapping("/cadastro_materiais")
+	public String cadastroMateriais(){
+		return "cadastroLista";
+
+
 	}
 
 	@PostMapping("/lista_salva")
@@ -122,14 +143,6 @@ public class AppController {
 		listRepo.save(lista);
 		
 		return "success";
-	}
-
-	@GetMapping("/cadastroLista")
-	public String listLists(Model model) {
-
-		model.addAttribute("lista", new Lista());
-		return "cadastroLista";
-		
 	}
 
 

@@ -23,7 +23,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="lo">
             <div class="nav-placeholder">
                 
             </div>
@@ -45,8 +45,8 @@
                     </div>
                     </div>
                     <div class="flex-container around mobilcol">
-                        <a href="cadastroUsuario.html" id="doador" class="botaopadrao">Sou doador</a>
-                        <a href="cadastroUsuario.html" id="aluno" class="botaopadrao">Sou aluno</a>
+                        <a href="cadastro_usuario" sec:authorize="isAnonymous()" id="doador" class="botaopadrao">Sou doador</a>
+                        <a href="cadastro_usuario" sec:authorize="isAnonymous()" id="aluno" class="botaopadrao">Sou aluno</a>
                     </div>
                     
                     
@@ -106,7 +106,7 @@
                     <h4>Joana, 12 anos</h4>
                     <p>Recebeu de doações lápis e canetas e continuou progredindo muito nos estudos.</p>
                     
-                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                        <a href="cadastro_usuario" sec:authorize="isAnonymous()" id="doar " class="botaomini ">Doar</a>
                     
                 </div>
 
@@ -117,7 +117,7 @@
                     <h4>Paula, 14 anos</h4>
                     <p>Tinha dificuldade com o aprendizado devido a falta de livros, mas as doações mudaram essa situação.</p>
                     
-                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                        <a href="cadastro_usuario" sec:authorize="isAnonymous()" id="doar " class="botaomini ">Doar</a>
                     
                 </div>
                 <div class="alunos ">  
@@ -125,7 +125,7 @@
                     <h4>Maria, 41 anos</h4>
                     <p>Meus alunos conseguiram com essa plataforma terem oportunidade de continuar estudando </p>
                     
-                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                        <a href="cadastro_usuario" sec:authorize="isAnonymous()" id="doar " class="botaomini ">Doar</a>
                     
                 </div>
             </div>

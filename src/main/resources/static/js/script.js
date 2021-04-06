@@ -1,4 +1,5 @@
 window.onload = function(){
+    
     selectEstado = document.getElementById("estado");
     selectCidade = document.getElementById("cidade");
 

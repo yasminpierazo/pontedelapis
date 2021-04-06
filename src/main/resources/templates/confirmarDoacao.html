@@ -23,7 +23,7 @@
 <body>
     <img th:src="@{img/envio 2.png}" class="absoluto">
     <header>
-        <nav >
+        <nav class="lo">
             <div id="nav-placeholder">
 
             </div>
@@ -32,12 +32,12 @@
     <main class="artigo">
         <div>
             <h1 id="titulo">Parabéns</h1>
-            <h2>Sua doação será entregue para <em>Maria Carvalho</em></h2> <!--será necessário implementar script para atualizar o nome do recebedor dinamicamente-->
+            <h2>Sua doação será entregue para <em id="nome2">Maria Carvalho</em></h2> <!--será necessário implementar script para atualizar o nome do recebedor dinamicamente-->
         </div>
         <div id="conteudo">
-            <h3>Maria Carvalho</h3>
-            <h4>Escola Aazul, R. Rio de Janeiro, 123</h4>
-            <h4>Cabo Frio, RJ CEP 11056-090</h4>
+            <h3 id="nome"></h3>
+            <h4 id="escola">Escola Aazul</h4>, <h4 id="cep">R. Rio de Janeiro, 123</h4>
+            <h4 id="cidade">Cabo Frio</h4>, <h4 id="estado">RJ CEP 11056-090</h4>
         </div>
         
         <div class="botao_vdd flex-container colunas">

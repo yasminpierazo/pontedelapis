@@ -5,40 +5,98 @@
     <meta charset="ISO-8859-1">
     <title>Cadastro de Usuário</title>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" th:href="@{/css/menunavegacao.css}" />
     <script th:src="@{/js/lista.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/doacoes.css}" />
 
+    <link rel="stylesheet" th:href="@{/css/default.css}" />
     <link rel="stylesheet" th:href="@{/css/menunavegacao.css}" />
-    <link rel="stylesheet" th:href="@{/css/cssCheckboxes.css}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 
-<body style="padding: 10%;">
-        <div>
-            <h1>Cadastro de Lista</h1>
-        </div>
+<body style="display: block;">
+    <nav class="lo">
+        <div class="nav-placeholder">
 
-
-
-        <form th:action="@{/lista_salva}" th:object="${lista}" method="post" style="max-width: 600px; margin: 0 auto;">
-            <div class="m-3">
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Materiais: </label>
-                    <div class="container">
-                        <ul class="ks-cboxtags" id="listaMater">
+            <div class="vercaomobil">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin: 10px;">
+                    Olá, <span sec:authentication="principal.nome"></span>.</span>
+                <img class="mobilelogo" src="/img/logoMobile.png">
+                <img class="logo" src="/img/Logo 1.png">
+                <ul class="vercaomobil">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Sobre Nós</a></li>
+                    <li class="botao" sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+                    <li class="botao" sec:authorize="isAnonymous()"><a href="/cadastro_usuario">Cadastro</a></li>
+                    <li class="botao" sec:authorize="isAuthenticated()"><a href="/cadastro_usuario">Acesso</a></li>
+                    <li class="botao" sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="flex-container invisivel">
+                <div class="flex-container">
+                    <div>
+                        <img src="/img/logo.png" id="logoG">
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <div class="home">
+                        <a href="/">Home</a>
+
+                    </div>
                 </div>
-        </form>
+                <div class="sobrenos">
+                    <a href="/about">Sobre nós</a>
+                </div>
+                <span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin: 30px;">
+                    Olá, <span sec:authentication="principal.nome"></span>.</span>
+                <div class="flex-container">
+                    <a href="/login" sec:authorize="isAnonymous()">
+                        <div style="height: 50px; width: 155px;" class="login">Login</div>
+                    </a>
+                    <a href="/cadastro_usuario" sec:authorize="isAnonymous()">
+                        <div class="registro" style="height: 50px; width: 155px;">Cadastro</div>
+                    </a>
+                    <a href="/escolhaPerfil" sec:authorize="isAuthenticated()">
+                        <div style="height: 50px; width: 155px;" class="registro">Acesso</div>
+                    </a>
+                    <a href="/logout" sec:authorize="isAuthenticated()">
+                        <div style="height: 50px; width: 155px; margin-left: 30px; margin-right: 30px;" class="login">
+                            Logout</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="container text-center">
+    <div>
+        <h1>Cadastro de Materiais</h1>
     </div>
+  
+    <br>
+    <br>
+    <br>
+    <form th:action="@{/lista_salva}" th:object="${lista}" method="post">
+
+        <div class="inputsHidden"></div>
+
+        <div class="container">
+            <ul class="ks-cboxtags" id="listaMater">
+                
+        </div>
+        <br>
+  <button type="submit" style="font-family:'Montserrat';font-weight: 700;color: white; background-color: #4450e4;  border: 2px solid #4450e4; width: 155px; height: 50px;" class="btn btn-primary">Cadastrar</button>
+
+    </form>
+</div>
 </body>
 
 </html>

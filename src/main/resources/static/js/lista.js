@@ -3,17 +3,31 @@
 
 
 window.onload = function () {
+    aux = '';
 
-    
 
-    
+    console.log(localStorage.nome);
+    console.log(localStorage.cidade);
+    console.log(localStorage.escola);
+    console.log(localStorage.cep);
+    console.log(localStorage.estado);
+    console.log(localStorage.matricula);
 
-    function cu()
-    {
-        
-    
-    
+    $inputsHidden = $(".inputsHidden");
+    $inputsHidden.html(function () {
+        aux = `<input type="hidden" name="infoAluno.nomeAluno" value="${localStorage.nome}">`
+        aux += `<input type="hidden" name="infoAluno.matricula" value="${localStorage.matricula}">`
+        aux += `<input type="hidden" name="infoEscola.nomeEscola" value="${localStorage.escola}">`
+        aux += `<input type="hidden" name="infoEscola.cepEscola" value="${localStorage.cep}">`
+        aux += `<input type="hidden" name="infoEscola.estadoEscola" value="${localStorage.estado}">`
+        aux += `<input type="hidden" name="infoEscola.cidadeEscola" value="${localStorage.cidade}">`
+        return aux;
     }
+    );
+
+
+
+
     divMater = document.getElementById("listaMater");
     materiais =
         [

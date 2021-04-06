@@ -22,19 +22,19 @@ import org.hibernate.annotations.TypeDefs;
 public class Doacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idDoacao;
+    private Long idDoacao;
 
-    public Integer getIdDoacao() {
+    public Long getIdDoacao() {
         return this.idDoacao;
     }
 
-    public void setIdDoacao(Integer idDoacao) {
+    public void setIdDoacao(Long idDoacao) {
         this.idDoacao = idDoacao;
     }
 
-    private Integer idLista;
+    private Long idLista;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String emailDoador;
 
     public String getEmailDoador() {
@@ -93,11 +93,11 @@ public class Doacao {
         this.itensDoacao = itensDoacao;
     }
 
-    public Integer getIdLista() {
+    public Long getIdLista() {
         return idLista;
     }
 
-    public void setIdLista(Integer idLista) {
+    public void setIdLista(Long idLista) {
         this.idLista = idLista;
     }
 

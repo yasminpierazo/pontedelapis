@@ -20,9 +20,9 @@ public class Lista {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idLista;
+    private Long idLista;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String emailUsuario;
 
     @Column(nullable = false)
@@ -41,11 +41,11 @@ public class Lista {
     @Column(columnDefinition = "json", nullable = false)
     private List<String> itens;
 
-    public Integer getIdLista() {
+    public Long getIdLista() {
         return this.idLista;
     }
 
-    public void setIdLista(Integer idLista) {
+    public void setIdLista(Long idLista) {
         this.idLista = idLista;
     }
 

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>List Users</title>
+	<title>Doações</title>
 	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script th:src="@{/js/user.js}"></script>
 	<link rel="stylesheet" th:href="@{/css/doacoes.css}" />
@@ -19,66 +19,92 @@
 
 <body>
 
-	<nav>
-		<div id="nav-placeholder"></div>
-		<div class="vercaomobil">
-			<input type="checkbox" id="check">
-			<label for="check" class="checkbtn">
-				<i class="fas fa-bars"></i>
-			</label>
-			<img class="mobilelogo" src="/img/logoMobile.png">
-			<img class="logo" src="/img/Logo 1.png">
-			<ul class="vercaomobil">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">Sobre Nós</a></li>
-				<li class="botao" ><a href="/login">Login</a></li>
-				<li class="botao" ><a href="/cadastro_usuario">Cadastro</a></li>
-			</ul>
-		</div>
-		<div class="flex-container invisivel">
-			<div class="flex-container">
-				<div>
-					<img src="/img/logo.png" id="logoG">
-				</div>
-				<div class="home">
-					<a href="/">Home</a>
+	<nav class="lo">
+		<div class="nav-placeholder">
 
+			<div class="vercaomobil">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin: 10px;">
+                    Olá, <span sec:authentication="principal.nome"></span>.</span>
+                <img class="mobilelogo" src="/img/logoMobile.png">
+                <img class="logo" src="/img/Logo 1.png">
+                <ul class="vercaomobil">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Sobre Nós</a></li>
+                    <li class="botao" sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+                    <li class="botao" sec:authorize="isAnonymous()"><a href="/cadastro_usuario">Cadastro</a></li>
+                    <li class="botao" sec:authorize="isAuthenticated()"><a href="/cadastro_usuario">Acesso</a></li>
+                    <li class="botao" sec:authorize="isAuthenticated()"><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+
+
+			<div class="flex-container invisivel">
+				<div class="flex-container">
+					<div>
+						<img src="/img/logo.png" id="logoG">
+					</div>
+					<div class="home">
+						<a href="/">Home</a>
+
+					</div>
 				</div>
-			</div>
-			<div class="sobrenos">
-				<a href="/about">Sobre nós</a>
-			</div>
-			<div class="flex-container">
-				<a href="/login">
-					<div id="login">
-						Login
-					</div>
-				</a>
-				<a href="/cadastro_usuario">
-					<div id="registro">
-						Cadastro
-					</div>
-				</a>
+				<div class="sobrenos">
+					<a href="/about">Sobre nós</a>
+				</div>
+				<span sec:authorize="isAuthenticated()" style="font-family: 'Montserrat'; margin: 30px;">
+					Olá, <span sec:authentication="principal.nome"></span>.</span>
+				<div class="flex-container">
+					<a href="/login" sec:authorize="isAnonymous()">
+						<div style="height: 50px; width: 155px;" class="login">Login</div>
+					</a>
+					<a href="/cadastro_usuario" sec:authorize="isAnonymous()">
+						<div class="registro" style="height: 50px; width: 155px;">Cadastro</div>
+					</a>
+					<a href="/escolhaPerfil" sec:authorize="isAuthenticated()">
+						<div style="height: 50px; width: 155px;" class="registro">Acesso</div>
+					</a>
+					<a href="/logout" sec:authorize="isAuthenticated()">
+						<div style="height: 50px; width: 155px; margin-left: 30px; margin-right: 30px;" class="login">
+							Logout</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</nav>
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+
 	<div class="container text-center">
 		<div>
-			<h1>Lista de Listas</h1>
+			<h1>Doação para alunos</h1>
 		</div>
+		<br>
+		<br>
+		<br>
+		<br>
 
-		<h2>Responsive Column Cards</h2>
-		<p>Resize the browser window to see the effect.</p>
 
 		<div class="row">
 			<form th:action="@{/confirmation}" method="post" th:object="${doacao}">
 				<div class="column" th:each="lista: ${arrListas}">
 					<label>
 						<div class="card">
-							<input type="radio" class="card" name="card">
-							<h3>[[${lista.infoAluno.nomeAluno}]]</h3>
-							<h4>[[${lista.infoEscola.nomeEscola}]], [[${lista.infoEscola.cidadeEscola}]] -
+							<input type="radio" class="card" th:value="${lista.idLista}" name="idLista">
+						<h3 class="nome">[[${lista.infoAluno.nomeAluno}]]</h3>
+							<h4 class="endereco">[[${lista.infoEscola.nomeEscola}]], [[${lista.infoEscola.cepEscola}]] - [[${lista.infoEscola.cidadeEscola}]] -
 								[[${lista.infoEscola.estadoEscola}]]</h4>
+
+								<input type="hidden" th:value="${lista.infoAluno.matricula}"
+												class="matricula">
 							<div class="itens">
 								<ul class="ks-cboxtags">
 									<li th:each="item, iter : ${lista.itens}"><input type="checkbox"
@@ -103,23 +129,10 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<input th:value="${lista.idLista}" name="idLista">
-											<input th:value="${lista.infoAluno.nomeAluno}" name="infoAluno.nomeAluno">
-											<input th:value="${lista.infoAluno.nomeResponsavel}"
-												name="infoAluno.nomeResponsavel">
-											<input th:value="${lista.infoAluno.matricula}" name="infoAluno.matricula">
-											<input th:value="${lista.infoAluno.idade}" name="infoEscola.idade">
-											<input th:value="${lista.infoEscola.cepEscola}" name="infoEscola.cepEscola">
-											<input th:value="${lista.infoEscola.logradouroEscola}"
-												name="infoEscola.logradouroEscola">
-											<input th:value="${lista.infoEscola.estadoEscola}"
-												name="infoEscola.estadoEscola">
-											<input th:value="${lista.infoEscola.cidadeEscola}"
-												name="infoEscola.cidadeEscola">
-											<input th:value="${lista.infoEscola.numEscola}" name="infoEscola.numEscola">
-											<input th:value="${lista.infoEscola.nomeEscola}"
-												name="infoEscola.nomeEscola">
+											
+											
 
+		
 
 										</div>
 										<div class="modal-footer">
@@ -132,6 +145,8 @@
 							</div>
 							<button type="button" data-toggle="modal" data-target="#ModalLongoExemplo" disabled
 								class="doar">Doar</button>
+						</div>
+				</div>
 			</form>
 			<!--MODALLLLLLLL-->
 
