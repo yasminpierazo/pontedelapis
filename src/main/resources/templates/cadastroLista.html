@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/menunavegacao.css}" />
+    <script th:src="@{/js/lista.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/menunavegacao.css}" />
+    <link rel="stylesheet" th:href="@{/css/cssCheckboxes.css}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+       
+</head>
+
+<body style="padding: 10%;">
+        <div>
+            <h1>Cadastro de Lista</h1>
+        </div>
+
+
+
+        <form th:action="@{/lista_salva}" th:object="${lista}" method="post" style="max-width: 600px; margin: 0 auto;">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Materiais: </label>
+                    <div class="container">
+                        <ul class="ks-cboxtags" id="listaMater">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto FCamara Squad48</title>
+    <script th:src="@{/js/menu.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" th:href="@{/css/menunavegacao.css}" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css">-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Icone Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e199f902ef.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-placeholder">
+                
+            </div>
+        </nav>
+
+        <div class="home1">
+           
+            <div id="bloco">
+                <div class="apresenta flex-container mobilcol">
+                    <div>
+                    <h1>
+                        Seja a diferença na vida de um estudante
+                    </h1>
+                    <div class="mobilcol">
+                    <p>A Ponte de Lápis ajuda alunos de ensino público e doadores a se aproximarem através da vontade de fazer bem ao próximo. Cadastre-se!</p>
+                    <img th:src="@{/img/Landing.png}" class="imgprimeira invisivel">
+                    <div class="landin">
+                    
+                    </div>
+                    </div>
+                    <div class="flex-container around mobilcol">
+                        <a href="cadastroUsuario.html" id="doador" class="botaopadrao">Sou doador</a>
+                        <a href="cadastroUsuario.html" id="aluno" class="botaopadrao">Sou aluno</a>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </header>
+
+
+
+    
+    <div class="divrelativa">
+        <p id="conheca">Conheça o que você pode fazer no site!</p>
+        
+        <hr id="regua">
+        <a href="#home2"><img th:src="@{/img/arrow_back_ios.png}"></a>
+    </div>
+    <main>
+        <div id="home2">
+            <article class="doacoes">
+                <div class='margemfix flex-container'>
+                    <div class='artigoh'>
+                        <h1> Doações transparentes</h1>
+                    </div>
+                    <div class='artigop'>
+                        <p>Aqui te mostramos tudo que você deseja saber sobre a doação, desde o momento que começou o processo até o recebimento ao aluno.</p>
+                    </div>
+                </div>
+
+                <div class="doacoes">
+                    <div class="flex-container around intrucao mobilcol">
+                        <div class="passo">
+                            <img th:src="@{/img/Caixa.png}" class="caixa1">
+                            <p>Faça doações <strong>dentro da nossa</strong> plataforma de maneira segura e rápida.</p>
+                        </div>
+                        <div class="passo">
+                            <img th:src="@{/img/Group.png}" class="group1">
+                            <p><strong>Receba doações</strong> em seu colégio com um clique de distância! Sejam livros, cadernos lápis, etc.</p>
+                        </div>
+                        <div class="passo ">
+                            <img th:src="@{/img/Criança.png}" class="crianca1">
+                            <p>Mude a vida de <strong>vários alunos</strong> por todo o Brasil.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="azul ">
+            <h1>Resultado das doações</h1>
+            <div class="boxes around flex-container ">
+                <div class="alunos ">  
+                    <img th:src="@{/img/Ellipse 8.png}">
+                    <h4>Joana, 12 anos</h4>
+                    <p>Recebeu de doações lápis e canetas e continuou progredindo muito nos estudos.</p>
+                    
+                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                    
+                </div>
+
+               
+
+                <div class="alunos ">  
+                    <img th:src="@{/img/Ellipse 9.png}">
+                    <h4>Paula, 14 anos</h4>
+                    <p>Tinha dificuldade com o aprendizado devido a falta de livros, mas as doações mudaram essa situação.</p>
+                    
+                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                    
+                </div>
+                <div class="alunos ">  
+                    <img th:src="@{/img/Ellipse 10.png}">
+                    <h4>Maria, 41 anos</h4>
+                    <p>Meus alunos conseguiram com essa plataforma terem oportunidade de continuar estudando </p>
+                    
+                        <a href="/cadastro_usuario" id="doar " class="botaomini ">Doar</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="home3 ">
+            <h1>Faça parte da nossa rede!</h1>
+
+            <div class="flex-container ">
+                <div class="content-home3">
+                <p>Estamos conectados com mais de 500 escolas públicas e já ajudamos 1500 crianças por todo o Brasil com nossas doações.<br> 
+                <br>Fazemos questão de ajudar o próximo da melhor forma possível e constantemente estamos buscando novas parcerias mas abrangir cada vez mais o território brasileiro.</p>
+                </div>
+                <div class="img invisivel">
+                    <img th:src="@{/img/FamilySchool.png}" style="width: 500px; height:500px" class="school ">
+                    <img th:src="@{/img/fundoHome3.png}" class="fundoschool ">
+                </div>
+                
+            </div>
+            <div class="grupoescola sumir2">
+                <img th:src="@{/img/FamilySchool.png}">
+            </div>
+        </div>
+
+        <div class="rodape flex-container mobilcol">
+            <img th:src="@{/img/logoRodape.png}" class="logorodape ">
+            <div class="icons flex-container">
+                <a href="https://github.com/bianca13fialho/FCamara-S48"><img th:src="@{/img/logoGitHub.png}" class="logoGitHub "></a>
+                <a href="# "><img th:src="@{/img/logoTwitter.png}" class="logoTwitter "></a>
+                <a href="# "><img th:src="@{/img/logoInstagram.png}" class="logoInstagram "></a>
+                <a href="# "><img th:src="@{/img/logoFace.png}" class="logoFace "></a>
+            </div>
+        </div>
+    </main>
+
+    </body>
+
+</html>

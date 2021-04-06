@@ -1,0 +1,221 @@
+
+
+#titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 4.861vw;
+    text-align: center;
+    color: #2C2C2C;
+}
+.artigo {
+    margin-top: 10.764vw;
+    
+}
+.absoluto {
+    
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    z-index: -5;
+}
+
+
+h2  {
+    margin-top: 2.083vw;
+    text-align: center;
+    width: 61.042vw;
+    height: 4.861vw;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.500vw;
+    line-height: 4.861vw;
+    color:#2C2C2C;
+    margin: auto;
+}
+
+#conteudo{
+    box-sizing: border-box;
+    padding: 1%;
+    margin: auto;
+    margin-top: 3.125vw;
+    width: 51.319vw;
+    height: fit-content;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-bottom: 6.736vw;;
+}
+
+#conteudo h3, h4 {
+    color:#2C2C2C;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    
+}
+#conteudo h3 {
+    font-size: 2.292vw;
+    font-weight: 700;
+}
+#conteudo h4 {
+    font-size: 2.083vw;
+    font-weight: 500;
+    line-height: 1vw;
+}
+/*.botoes {
+    margin: auto;
+    margin-top: 6.736vw;
+    padding: 0%;
+    
+    width: 53.056vw;
+    height: fit-content;
+    margin-bottom: 15.278vw;
+
+    
+}*/
+.botao_vdd {
+    margin-top: 6.736vw;;
+    width: 53.056vw; 
+    height: fit-content;
+    margin:auto;
+     
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    
+}
+
+.espacoentre {
+    justify-content:space-between;
+}
+#end{
+    margin-left: 0%;
+    width: 18.542vw;
+    height: 5vw;
+    background: #4450E4;
+    box-shadow: 0px 9px 20px -3px rgba(120, 84, 247, 0.33);
+    border-radius: 60px;
+    font-family: 'Montserrat';
+    
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 280%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #F4F4F4;
+    
+
+}
+
+#impEt{
+    margin-right: 0%;
+    width: 18.542vw;
+height: 5vw;
+background: #FFFFFF;
+border: 1px solid #4450E4;
+box-shadow: 0px 9px 20px -3px rgba(120, 84, 247, 0.33);
+border-radius: 60px;
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+
+display: flex;
+align-items: center;
+text-align: center;
+color: #4450E4;
+}
+
+.botaopadrao {
+    display: block;
+    border-radius: 60px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 18.542vw;
+    height: 5vw;
+    font-weight: bold;
+    /*font-size: 1.667vw;*/
+    line-height: 4.861vw;
+    
+}
+#imprimir {
+    font-family: 'Montserrat', sans-serif;
+    color: #4450E4;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 70px;
+    margin-right: 0%;
+    margin-left: 0%;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+#baixar {
+    margin-right: 0%;
+    padding-right: 0%;
+    background-color: #4450E4;
+    color: #F4F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 70px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .absoluto {
+        display: none;
+    }
+    #titulo {
+        font-size: 8.696vw;
+        margin: auto;
+        margin-top: 18.116vw;
+        color: #2C2C2C;
+        line-height: 16.908vw;
+    }
+     h2 {
+        font-size: 5.797vw;
+        width: 88.647vw;
+        margin-top: 2.899vw;
+        line-height: 9.903vw;
+        
+    }
+
+    #conteudo {
+        margin-top: 13.043vw;
+        width: 88.647vw;
+        height: 44.444vw;
+    }
+    #conteudo h3 {
+        
+        font-size: 5.797vw;
+        line-height: 10.908vw;
+    }
+    #conteudo h4 {
+        font-size: 4.831vw;
+        font-weight: 500;
+    }
+    .colunas {
+        display: flex;
+        flex-direction: column;
+    }
+    .mobilcol {
+        flex-direction:column;
+        align-items:center;
+        justify-content: space-around;
+    }
+    .botoes {
+        width: 64.493vw;
+        height: 17.391vw;
+        border: 4px dotted red;
+
+    }
+    .botoes p {
+        font-size: 5.797vw;
+        line-height: 16.908vw;
+    }
+}

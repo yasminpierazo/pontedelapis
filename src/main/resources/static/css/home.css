@@ -1,0 +1,754 @@
+body {
+    /*margin-right: 85px;*/
+    margin-top: 28px;
+    overflow-x: hidden;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.espacoentre {
+    justify-content: space-evenly;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.home {
+    font-size: 25px;
+    line-height: 30.48px;
+    text-align: center;
+    margin: auto;
+    margin-left: 21px;
+}
+
+.sobrenos a:hover {
+    border-bottom: 6px solid #2C4BED;
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.sobrenos {
+    font-size: 25px;
+    line-height: 30.48px;
+    text-align: center;
+    margin: auto;
+}
+
+#barrahome {}
+
+.home a:hover {
+    margin-top: 7px;
+    border-bottom: 6px solid #2C4BED;
+    border-radius: 5px;
+}
+
+
+/*
+#barrahome{
+    background-color: #2C4BED;
+    border-radius: 20px;
+    width: 79px;
+    height: 6px;
+    margin-top: 7px;
+}*/
+
+#login {
+    font-size: 18px;
+    display: block;
+    height: 22px;
+    width: 126px;
+    left: 0px;
+    top: 13px;
+    border-radius: 5px;
+    color: #4450E4;
+    border: 1px solid #4450E4;
+    background-color: white;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    padding: 13px;
+    margin-right: 41px;
+}
+
+#registro {
+    font-size: 18px;
+    display: block;
+    height: 22px;
+    width: 126px;
+    left: 0px;
+    top: 13px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #4450E4;
+    background-color: #4450E4;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    padding: 13px;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    color: #2C2C2C, 100%;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#logoG {
+    margin-left: 85px;
+    width: 20vw;
+    height: 6vw;
+    position: relative;
+    bottom: 10px;
+}
+
+.apresenta {
+    margin-left: 8.264vw;
+    width: 643px;
+    margin-top: 168px;
+}
+
+.apresenta h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 74.4px;
+    color: #2C2C2C;
+}
+
+.apresenta p {
+    font-size: 24px;
+    line-height: 150%;
+    font-family: 'Roboto', sans-serif;
+    color: #2C2C2C;
+    margin-top: 48px;
+    width: 520px;
+}
+
+#bloco {
+    /*position: relative;
+    background-image: url('../imgs/Landing.png');
+    background-repeat: no-repeat;*/
+}
+
+#bloco img {
+    position: absolute;
+    width: 671px;
+    height: 455px;
+    left: 684px;
+    top: 227px;
+}
+
+.botaopadrao {
+    display: block;
+    border-radius: 60px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 72px;
+    width: 267px;
+}
+
+#aluno {
+    margin-top: 48px;
+    display: block;
+    color: #F4F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 70px;
+    background-color: #FD7228;
+}
+
+#doador {
+    margin-top: 48px;
+    background-color: #4450E4;
+    color: #F4F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 70px;
+}
+
+#conheca {
+    /*position: absolute;*/
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 25px;
+    color: #2C2C2C;
+    /*margin-left: 625px;*/
+    margin-top: 7.8vw;
+    margin-bottom: 1%;
+}
+
+.divrelativa {
+    position: relative;
+    top: 130px;
+}
+
+#regua {
+    position: relative;
+    margin-left: 5.903vw;
+    border: 1px solid #2C2C2C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    width: 88.194vw;
+}
+
+.divrelativa img {
+    position: absolute;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 85%;
+    z-index: 5;
+}
+
+#home2 {
+    margin-top: 150px;
+    height: 1000px;
+}
+
+.margemfix {
+    margin: auto;
+    margin-left: 85px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.artigoh {
+    margin-top: 3.750vw;
+    height: 11.6vw;
+    width: 74vw;
+}
+
+.artigoh h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.306vw;
+    font-weight: 700;
+    line-height: 74px;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+.artigop {
+    height: 5.417vw;
+    width: 59.583vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.667vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.500vw;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.intrucao {
+    margin: auto;
+    /*margin-left: 148px;*/
+    margin-top: 7.153vw;
+}
+
+.passo {
+    width: 20.556vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.passo p {
+    text-align: center;
+    margin-top: 4.444vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.250vw;
+    line-height: 1.736vw;
+}
+
+.passo img {
+    margin: auto;
+    display: block;
+}
+
+.azul {
+    width: 100%;
+    height: 748px;
+    background-color: #5E68EB;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.boxes {
+    margin-top: 130px;
+}
+
+.alunos {
+    padding-top: 20px;
+    width: 350px;
+    height: 340px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.azul h1 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 74px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 91px;
+}
+
+.botaomini {
+    display: inline-block;
+    border-radius: 60px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    width: 139px;
+    background-color: #4450E4;
+    color: #F4F4F4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 35px;
+    justify-content: center;
+}
+
+.home3 {
+    margin-top: 132px;
+    margin-left: 83px;
+    height: 700px;
+}
+
+.home3 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 62px;
+    color: #2C2C2C;
+}
+
+.content-home3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-home3 p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    margin-top: 55px;
+    width: 735px;
+    line-height: 36px;
+    color: #2C2C2C;
+}
+
+.fundoschool {
+    position: absolute;
+    margin-left: -320px;
+    z-index: -5;
+}
+
+.school {
+    position: relative;
+    margin-left: -10px;
+    margin-right: 47px;
+}
+
+.rodape {
+    height: 200px;
+    width: 100%;
+    background-color: rgb(36, 34, 34);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logorodape {
+    margin-left: 101px;
+    align-self: center;
+    /*width: 450px;
+    height: 100px;*/
+}
+
+.icons {
+    padding: 80px;
+}
+
+.logoTwitter {
+    margin-left: 30px;
+}
+
+.logoInstagram {
+    margin-left: 30px;
+}
+
+.logoFace {
+    margin-left: 30px;
+}
+
+
+/* Menu Mobile */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.vercaomobil {
+    display: none;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    font-family: 'montserrat', sans-serif;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    float: left;
+    line-height: 80px;
+    margin-right: 40px;
+    margin-left: 20px;
+    display: none;
+}
+
+.mobilelogo {
+    float: right;
+    /*margin-right: 20px;*/
+    margin-top: 20px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+a.active,
+a:hover {
+    transition: .5s;
+}
+
+.sumir {
+    display: none;
+}
+
+.sumir2 {
+    display: none;
+}
+
+.imgprimeira {
+    width: 67.431vw;
+}
+
+@media screen and (max-width: 600px) {
+    .botaopadrao {
+        width: 64.493vw;
+        height: 8.14vh;
+        align-self: center;
+        margin-bottom: 0;
+    }
+    #aluno,
+    #doador {
+        font-size: 4.3vw;
+        line-height: 8vh;
+    }
+    #aluno {
+        margin-top: 4vh;
+    }
+    .sumir2 {
+        display: block;
+    }
+    .sumir {
+        display: contents;
+        width: 60.783vw;
+    }
+    .mobilcol {
+        flex-direction: column;
+    }
+    .apresenta {
+        width: 90vw;
+        margin-left: 0vw;
+        margin-right: 4vw;
+        margin-top: 6vh;
+    }
+    .apresenta h1 {
+        font-size: 7.24vw;
+        line-height: 120%;
+        text-align: center;
+    }
+    .apresenta p {
+        font-size: 3.3vw;
+        font-family: 'Roboto', sans-serif;
+        line-height: 150%;
+        width: 90vw;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    #conheca {
+        display: none;
+    }
+    #regua {
+        margin-left: 0;
+    }
+    .divrelativa img {
+        position: absolute;
+        left: 43%;
+        margin-top: -7%;
+    }
+    .margemfix {
+        margin-left: 0px;
+        margin-right: 0%;
+    }
+    .artigoh {
+        margin-left: 0%;
+        padding: 0%;
+        margin-right: 0%;
+        width: 90%;
+    }
+    .artigoh h1 {
+        text-align: center;
+        font-size: 7vw;
+        line-height: 8.696vw;
+        margin-left: 0%;
+    }
+    .artigop {
+        margin-top: 5%;
+        width: 90.338vw;
+        height: 18.841vw;
+        font-size: 4.348vw;
+        line-height: 150%;
+        font-family: 'Roboto', sans-serif;
+    }
+    .passo {
+        width: 71.498vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .passo p {
+        text-align: center;
+        margin-top: 7.729vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 4.348vw;
+        line-height: 6.039vw;
+    }
+    .caixa1 {
+        width: 25.121vw;
+        height: 26.812vw;
+    }
+    .group1 {
+        width: 23.913vw;
+        height: 26.329vw;
+    }
+    .crianca1 {
+        width: 25.362vw;
+        height: 28.502vw;
+    }
+    .intrucao {
+        margin-top: 18.599vw;
+        align-items: center;
+    }
+    .home2 {
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+    }
+    .boxes {
+        width: 150%;
+        margin-top: 8.937vw;
+    }
+    .azul {
+        margin-top: -70%;
+        width: 200%;
+        height: 135.502vw;
+    }
+    .alunos {
+        width: 71.981vw;
+        height: 80.676vw;
+        justify-content: center;
+        align-items: center;
+        color: #2C2C2C;
+    }
+    .alunos h4 {
+        margin-top: 2.899vw;
+        width: 98%;
+        font-size: 5.797vw;
+        color: #2C2C2C;
+    }
+    .alunos p {
+        margin-top: 1vw;
+        font-size: 3.865vw;
+        line-height: 150%;
+        /*width: 60.870vw;*/
+        padding: 5%;
+        justify-self: center;
+    }
+    .alunos img {
+        width: 24.155vw;
+        height: 24.155vw;
+    }
+    .azul h1 {
+        font-size: 7.246vw;
+        margin-top: 7.729vw;
+        padding-top: 0%;
+        width: 98vw;
+        text-align: center;
+    }
+    .home3 {
+        margin-left: 0%;
+        margin-top: 15.459vw;
+    }
+    .home3 h1 {
+        width: 90.338vw;
+        font-size: 7.246vw;
+        text-align: center;
+    }
+    .home3 p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 4.348vw;
+        width: 87.923vw;
+        margin-left: 4.831vw;
+    }
+    .grupoescola {
+        margin-top: 11.836vw;
+        height: 95vw;
+    }
+    .grupoescola img {
+        width: 79.227vw;
+        height: 79.227vw;
+        margin-left: 9.662vw;
+    }
+    .rodape {
+        margin-top: 13vh;
+        width: 100.000vw;
+        height: 49.034vw;
+    }
+    .logorodape {
+        margin-top: 2.657vw;
+        width: 67.633vw;
+        height: 19.565vw;
+        margin-left: 0%;
+    }
+    .icons {
+        justify-content: center;
+        padding: 0%;
+        align-self: center;
+        margin-bottom: 10%;
+    }
+    .landin {
+        background-image: url("../imgs/Landing.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 84.783vw;
+        height: 57.488vw;
+    }
+    .vercaomobil {
+        display: inline-block;
+    }
+    .invisivel {
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+    .checkbtn {
+        display: block;
+    }
+    .mobilelogo {
+        display: block;
+        margin-right: 5%;
+    }
+    ul {
+        position: fixed;
+        width: 10%;
+        height: 60vh;
+        background: #5E68EB;
+        top: 80px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 50;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: white;
+        font-size: 25px;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
